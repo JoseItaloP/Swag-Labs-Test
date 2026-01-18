@@ -1,3 +1,6 @@
+import cart from "../pages/cart"
+import header from "../pages/header"
+import Inventory from "../pages/Inventory"
 import login from "../pages/login"
 
 describe('Inventory test page', ()=>{
@@ -17,12 +20,28 @@ describe('Inventory test page', ()=>{
     })
 
     //check add to cart
-    it('should add the item to the cart succefully', ()=>{
+    it('should add the item to the cart succefully', () => {
+        login.makeLogin(user.StandardU, pass)
 
+        Inventory.addItemToCart('Sauce Labs Backpack')
+
+        header.verifyValueCartBadge(1)
+        header.navigateToCart()
+
+        cart.verifyUrlCart()
+        cart.verifyItemInCart('Sauce Labs Backpack')
     })
 
-    it("should remove the item from the cart succefully", ()=>{
+    it.only("should remove the item from the cart succefully", () => {
+        login.makeLogin(user.StandardU, pass)
 
+        Inventory.addItemToCart('Sauce Labs Backpack')
+
+        header.verifyValueCartBadge(1)
+
+        Inventory.removeItemToCart('Sauce Labs Backpack')
+
+        header.verifyCartBadgeNotExist()
     })
 
     it("should not remove item from the cart in problem_user",()=>{
@@ -38,5 +57,18 @@ describe('Inventory test page', ()=>{
 
     it("should not show the same item after click on it with problem_user", ()=>{
         
+    })
+
+    //check product order
+    it("should change the order from the low to the hight price", () => {
+
+    })
+
+    it("should change the order from the hight to low price", () => {
+
+    })
+
+    it("should change the order to Z-A", () => {
+
     })
 })
