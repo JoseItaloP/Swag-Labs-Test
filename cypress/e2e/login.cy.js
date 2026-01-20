@@ -45,6 +45,7 @@ describe('Testing the login', ()=>{
      })
 
     it('Sucefully pass test in performance_glitch_user', () => { 
+        // Test time here
         login.makeLogin(user.PerformanceGU, pass)
 
         Inventory.confirmatingPage()

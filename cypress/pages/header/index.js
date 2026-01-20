@@ -14,4 +14,9 @@ export default new class header {
         cy.get(elements.carBadgeLink).click()
     }
 
+    clickOnLogoutBtt() {
+        cy.get('#react-burger-menu-btn').click()
+        cy.get('[data-test="logout-sidebar-link"]').click()
+    }
+
 }

@@ -139,4 +139,22 @@ export default new class Inventory{
 
     }
 
+    getAlertWindow(mensageError) {
+        cy.on('window:alert', (str) => {
+            expect(str).to.equal(mensageError);
+        });
+    }
+
+    getEspecificItemValuePrice(itemID, secondItemPrice) {
+        cy.get(elements.itemPriceValue(itemID)).then((valueItem) => {
+            const transformText = parseFloat(valueItem.text().replaceAll('$', ''))
+            return transformText
+        }).as('firstPrice')
+    }
+
+    getImageItemSrc() {
+        cy.get(elements.itemImage).then((item) => {
+            return item.attr('src')
+        })
+    }
 }

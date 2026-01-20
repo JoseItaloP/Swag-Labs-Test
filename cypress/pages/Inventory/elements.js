@@ -5,7 +5,8 @@ const elements = {
     inventoryItemName: '[data-test="inventory-item-name"]',
     iventoryIdUrl: (idN) => `https://www.saucedemo.com/inventory-item.html?id=${idN}`,
     itemPositionNum: (idNum) => `[data-test="item-${idNum}-title-link"]`,
-    itemPriceValue: (itemId) => `:nth-child(${itemId}) > [data-test="inventory-item-description"] > .pricebar >  [data-test="inventory-item-price"]`
+    itemPriceValue: (itemId) => `:nth-child(${itemId}) > [data-test="inventory-item-description"] > .pricebar >  [data-test="inventory-item-price"]`,
+    itemImage: '[data-test="inventory-item-sauce-labs-backpack-img"]'
 }
 
 function transformData(data) {

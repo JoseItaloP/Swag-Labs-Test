@@ -1,5 +1,6 @@
 import cart from "../pages/cart"
 import header from "../pages/header"
+import elements from "../pages/header/elements"
 import Inventory from "../pages/Inventory"
 import login from "../pages/login"
 
@@ -120,7 +121,7 @@ describe('Inventory test page', ()=>{
         Inventory.verifyOrderZtoA()
     })
 
-    it.only("should not work click on order items bar in problem_user", () => {
+    it("should not work click on order items bar in problem_user", () => {
         login.makeLogin(user.ProblemU, pass)
 
         Inventory.header02OptionClick('za')
@@ -128,6 +129,36 @@ describe('Inventory test page', ()=>{
     })
 
     it("should return erro after click on order items bar in erro_user", () => {
+        login.makeLogin(user.ErroU, pass)
+
+        Inventory.getAlertWindow('Sorting is broken! This error has been reported to Backtrace.')
+
+        Inventory.header02OptionClick('za')
 
     })
+
+
+    it("should have different position on cart badget in visual_user", () => {
+        login.makeLogin(user.VisualU, pass)
+
+        Inventory.getEspecificItemValuePrice(1)
+
+
+        const ItemImage = Inventory.getImageItemSrc()
+
+        Inventory.getInventoryItemCartName(4, 'Sauce Labs Backpack')
+
+        cy.get('[data-test="item-sauce-labs-backpack-img"]').then((element) => {
+            expect(element).to.not.have.attr('src', ItemImage)
+        })
+
+        cy.get('[data-test="inventory-item-price"]').then((element) => {
+            const TransformText = parseFloat(element.text().replaceAll('$', ''))
+            cy.get('@firstPrice').then((valueReturn) => {
+                expect(TransformText).to.not.been.eql(valueReturn)
+            })
+        })
+
+    })
+
 })
