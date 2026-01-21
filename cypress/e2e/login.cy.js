@@ -1,5 +1,6 @@
 import login from "../pages/login"
 import Inventory from "../pages/Inventory"
+import elements from "../pages/Inventory/elements"
 
 describe('Testing the login', ()=>{
 
@@ -44,11 +45,25 @@ describe('Testing the login', ()=>{
         Inventory.confirmatingPage()
      })
 
-    it('Sucefully pass test in performance_glitch_user', () => { 
-        // Test time here
-        login.makeLogin(user.PerformanceGU, pass)
+    it('Sucefully pass test in performance_glitch_user', () => {
 
-        Inventory.confirmatingPage()
+        cy.window().then((win) => {
+            const startTime = win.performance.now()
+            login.makeLogin(user.PerformanceGU, pass)
+
+            cy.url().should('eq', elements.InventoryUrl).then(() => {
+
+                const endTime = win.performance.now()
+                const elapsedTime = (endTime - startTime) / 1000
+                const duration = parseFloat(elapsedTime)
+
+                cy.log(`tempo decorrido ${duration}`)
+
+                expect(duration).to.be.greaterThan(4)
+            })
+
+        })
+
      })
 
     it('Sucefully pass test in  error_user', () => { 

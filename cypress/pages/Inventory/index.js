@@ -1,7 +1,7 @@
 import elements from "./elements"
 export default new class Inventory{
-    confirmatingPage(){
-        cy.url().should('eq', elements.InventoryUrl)
+    confirmatingPage(options) {
+        cy.url(options).should('eq', elements.InventoryUrl)
     }
 
     addItemToCart(item) {

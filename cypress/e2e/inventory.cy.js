@@ -138,7 +138,7 @@ describe('Inventory test page', ()=>{
     })
 
 
-    it("should have different position on cart badget in visual_user", () => {
+    it("should show a different item after click on it in visual_user", () => {
         login.makeLogin(user.VisualU, pass)
 
         Inventory.getEspecificItemValuePrice(1)
