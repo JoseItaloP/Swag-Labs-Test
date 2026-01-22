@@ -27,6 +27,8 @@ describe(' Header elements test ', ()=>{
         cy.url().should('eq', 'https://www.saucedemo.com/')
     })
 
+    it("should navigate to all items page")
+
 
 
 })

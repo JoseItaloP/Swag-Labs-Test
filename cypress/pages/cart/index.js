@@ -9,4 +9,16 @@ export default new class cart{
     verifyItemInCart(item){
         cy.get(elements.itemInCart).should('have.text', item)
     }
+
+    removeItemCart(itemName) {
+        cy.get(elements.removeItemBtt(itemName)).click()
+    }
+
+    checkItemRemoved(itemName) {
+        cy.get(elements.removeItemBtt(itemName)).should('not.exist',)
+    }
+
+    clickOnContinueShopping() {
+        cy.get(elements.bttContinueShopping).click()
+    }
 }

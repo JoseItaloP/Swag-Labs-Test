@@ -45,24 +45,13 @@ describe('Testing the login', ()=>{
         Inventory.confirmatingPage()
      })
 
-    it('Sucefully pass test in performance_glitch_user', () => {
+    it.only('Sucefully pass test in performance_glitch_user', () => {
 
-        cy.window().then((win) => {
-            const startTime = win.performance.now()
-            login.makeLogin(user.PerformanceGU, pass)
 
-            cy.url().should('eq', elements.InventoryUrl).then(() => {
-
-                const endTime = win.performance.now()
-                const elapsedTime = (endTime - startTime) / 1000
-                const duration = parseFloat(elapsedTime)
-
-                cy.log(`tempo decorrido ${duration}`)
-
-                expect(duration).to.be.greaterThan(4)
-            })
-
+        Inventory.glitchUserTime({
+            call: () => login.makeLogin(user.PerformanceGU, pass)
         })
+
 
      })
 

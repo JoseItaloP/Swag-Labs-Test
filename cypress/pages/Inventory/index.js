@@ -9,7 +9,29 @@ export default new class Inventory{
     }
 
     removeItemToCart(item) {
-        cy.get(elements.removeToCartItem(item))
+        cy.get(elements.removeToCartItem(item)).click()
+
+    }
+
+    glitchUserTime(elemenstsCall) {
+
+        cy.window().then((win) => {
+            const startTime = win.performance.now()
+            elemenstsCall.call()
+
+
+            cy.url().should('eq', elements.InventoryUrl).then(() => {
+
+                const endTime = win.performance.now()
+                const elapsedTime = (endTime - startTime) / 1000
+                const duration = parseFloat(elapsedTime.toFixed(2))
+
+                cy.log(`tempo decorrido ${duration}`)
+
+                expect(duration).to.be.greaterThan(4)
+            })
+
+        })
 
     }
 

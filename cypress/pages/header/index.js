@@ -7,7 +7,7 @@ export default new class header {
     }
 
     verifyCartBadgeNotExist(){
-        cy.get(elements.qttShpCartBadge).should('not.eq')
+        cy.get(elements.qttShpCartBadge).should('not.exist')
     }
 
     navigateToCart(){
