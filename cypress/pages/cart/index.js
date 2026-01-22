@@ -21,4 +21,8 @@ export default new class cart{
     clickOnContinueShopping() {
         cy.get(elements.bttContinueShopping).click()
     }
+
+    clickOnBtnCheckout() {
+        cy.get(elements.btnCheckout).click()
+    }
 }
