@@ -8,10 +8,12 @@ export default new class cart{
 
     verifyItemInCart(item){
         cy.get(elements.itemInCart).should('have.text', item)
+        cy.screenshot()
     }
 
     removeItemCart(itemName) {
         cy.get(elements.removeItemBtt(itemName)).click()
+        cy.screenshot()
     }
 
     checkItemRemoved(itemName) {

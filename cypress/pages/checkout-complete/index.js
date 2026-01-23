@@ -4,6 +4,7 @@ export default new class checkoutComplete{
 
     checkUrl(){
         cy.url().should('eq', elements.checkCompletUrl)
+        cy.screenshot()
     }
 
     checkLayout(header, text){

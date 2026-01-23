@@ -2,6 +2,7 @@ import elements from "./elements"
 export default new class Inventory{
     confirmatingPage(options) {
         cy.url(options).should('eq', elements.InventoryUrl)
+
     }
 
     addItemToCart(item) {
@@ -45,6 +46,8 @@ export default new class Inventory{
 
             return true;
         });
+
+        cy.screenshot()
     }
 
     getInventoryItemCartName(idNum, itemName) {
@@ -53,6 +56,7 @@ export default new class Inventory{
 
     checkUrlIdItem(idNum) {
         cy.url().should('eq', elements.iventoryIdUrl(idNum))
+        cy.screenshot()
     }
 
     getItemCartName(textItem) {
@@ -60,7 +64,8 @@ export default new class Inventory{
     }
 
     header02OptionClick(optionName) {
-        cy.get('[data-test="product-sort-container"]').select([optionName])
+        cy.get(elements.orderBoxContainer).select([optionName])
+        cy.screenshot()
     }
 
     verifyOrderLowToHight() {
@@ -165,6 +170,7 @@ export default new class Inventory{
         cy.on('window:alert', (str) => {
             expect(str).to.equal(mensageError);
         });
+        cy.screenshot()
     }
 
     getEspecificItemValuePrice(itemID, secondItemPrice) {

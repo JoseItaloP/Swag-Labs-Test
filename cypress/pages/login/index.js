@@ -8,17 +8,23 @@ export default new class Login {
         cy.get(elements.dataTestUsername).type(UserName)
         cy.get(elements.dataTestPass).type(Password)
         cy.get(elements.dataTestButt).click()
+
+        cy.screenshot()
     }
 
     getErroFromLogin(){
         cy.get(elements.dataTestErr)
         .should('exist')
         .and('have.text', 'Epic sadface: Username and password do not match any user in this service')
+
+        cy.screenshot()
     }
 
     gerErroLockedLogin(){
         cy.get(elements.dataTestErr)
         .should('exist')
         .and('have.text', 'Epic sadface: Sorry, this user has been locked out.')
+
+        cy.screenshot()
     }
 }

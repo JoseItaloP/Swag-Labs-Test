@@ -16,6 +16,7 @@ export default new class checkoutTwo{
         cy.get(elements.itemName).should('have.text', itemName)
         cy.get(elements.itemPrice).should('have.text', ItemPrice)
         cy.get(elements.itemPriceSubtotal).should('have.text', ItemPriceSubtotal)
+        cy.screenshot()
     }
 
 }

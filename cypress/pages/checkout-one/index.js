@@ -7,9 +7,18 @@ export default new class checkoutOne {
 
     wirtInformation(firstName, lastName, zipCode){
 
-        if(firstName) cy.get(elements.inputFirstName).type(firstName)
-        if(lastName) cy.get(elements.inputLastName).type(lastName)
-        if(zipCode) cy.get(elements.inputPostalCode).type(zipCode)
+        if (firstName) {
+            cy.get(elements.inputFirstName).type(firstName)
+            cy.screenshot()
+        }
+        if (lastName) {
+            cy.get(elements.inputLastName).type(lastName)
+            cy.screenshot()
+        }
+        if (zipCode) {
+            cy.get(elements.inputPostalCode).type(zipCode)
+            cy.screenshot()
+        }
 
     }
 
@@ -27,5 +36,6 @@ export default new class checkoutOne {
 
     espectedErroMensageInput(erroMensage){
         cy.get(elements.errorBox).should('have.text', erroMensage)
+        cy.screenshot()
     }
 }
