@@ -1,5 +1,5 @@
 const elements = {
-    InventoryUrl: 'https://www.saucedemo.com/inventory.html',
+    InventoryUrl: Cypress.env('STANDART_URL') + 'inventory.html',
     addToCartItem: (element) => `[data-test="add-to-cart-${transformData(element)}"]`,
     removeToCartItem: (element) => `[data-test="remove-${transformData(element)}"]`,
     inventoryItemName: '[data-test="inventory-item-name"]',

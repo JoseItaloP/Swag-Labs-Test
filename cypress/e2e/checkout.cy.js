@@ -5,19 +5,12 @@ import cart from "../pages/cart"
 import checkoutOne from "../pages/checkout-one"
 import checkoutTwo from "../pages/checkout-two"
 import checkoutComplete from "../pages/checkout-complete"
+import { user, pass } from "../helper/users"
+
 
 describe("Test the checkout pages", ()=>{
 
-    const user = {
-                StandardU: 'standard_user',
-                LockedU: 'locked_out_user',
-                ProblemU: 'problem_user',
-                PerformanceGU: 'performance_glitch_user',
-                ErroU: 'error_user',
-                VisualU: 'visual_user'
-            }
-    
-    const pass = 'secret_sauce'
+
     
     beforeEach(() => {
                 login.visitPage()
@@ -79,7 +72,7 @@ describe("Test the checkout pages", ()=>{
 
     })
 
-    it.only('should return erro in finish with erroUser', () => {
+    it('should return erro in finish with erroUser', () => {
         login.makeLogin(user.ErroU, pass)
 
         Inventory.addItemToCart('Sauce Labs Backpack')

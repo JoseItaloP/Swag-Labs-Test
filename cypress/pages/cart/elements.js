@@ -1,5 +1,5 @@
 const elements = {
-    url: 'https://www.saucedemo.com/cart.html',
+    url: Cypress.env('STANDART_URL') + 'cart.html',
     itemInCart: '[data-test="inventory-item-name"]',
     removeItemBtt: (itemName) => `[data-test="remove-${transformData(itemName)}"]`,
     bttContinueShopping: '[data-test="continue-shopping"]',

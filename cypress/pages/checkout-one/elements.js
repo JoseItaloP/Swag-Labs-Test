@@ -1,5 +1,5 @@
 const elements ={
-    checkoutOneUrl: 'https://www.saucedemo.com/checkout-step-one.html',
+    checkoutOneUrl: Cypress.env('STANDART_URL') + 'checkout-step-one.html',
     inputFirstName: '[data-test="firstName"]',
     inputLastName: '[data-test="lastName"]',
     inputPostalCode: '[data-test="postalCode"]',

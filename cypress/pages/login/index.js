@@ -2,14 +2,17 @@ import elements from "./elements"
 
 export default new class Login {
 
-    visitPage(){cy.visit('https://www.saucedemo.com/')}
+    visitPage() {
+        cy.visit(Cypress.env('STANDART_URL'))
+        cy.screenshot()
+
+    }
 
     makeLogin(UserName, Password){
         cy.get(elements.dataTestUsername).type(UserName)
         cy.get(elements.dataTestPass).type(Password)
         cy.get(elements.dataTestButt).click()
 
-        cy.screenshot()
     }
 
     getErroFromLogin(){

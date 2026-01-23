@@ -1,5 +1,7 @@
 import elements from "./elements"
 export default new class Inventory{
+
+
     confirmatingPage(options) {
         cy.url(options).should('eq', elements.InventoryUrl)
 

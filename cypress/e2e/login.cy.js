@@ -1,23 +1,13 @@
 import login from "../pages/login"
 import Inventory from "../pages/Inventory"
-import elements from "../pages/Inventory/elements"
+import { user, pass } from "../helper/users"
 
 describe('Testing the login', ()=>{
 
-        const user = {
-            StandardU: 'standard_user',
-            LockedU: 'locked_out_user',
-            ProblemU: 'problem_user',
-            PerformanceGU: 'performance_glitch_user',
-            ErroU: 'error_user',
-            VisualU: 'visual_user'
-        }
+    beforeEach(() => {
 
-        const pass = 'secret_sauce'
-
-        beforeEach(()=>{
-            login.visitPage()
-        })
+        login.visitPage()
+    })
 
     it('Sucefully pass test in standard_user', () => { 
 
@@ -45,7 +35,7 @@ describe('Testing the login', ()=>{
         Inventory.confirmatingPage()
      })
 
-    it.only('Sucefully pass test in performance_glitch_user', () => {
+    it('Sucefully pass test in performance_glitch_user', () => {
 
 
         Inventory.glitchUserTime({

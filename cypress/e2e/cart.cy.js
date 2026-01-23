@@ -2,19 +2,12 @@ import login from "../pages/login"
 import Inventory from "../pages/Inventory"
 import header from "../pages/header"
 import cart from "../pages/cart"
+import { user, pass } from "../helper/users"
+
 
 describe('Cart page testing', ()=>{
 
-    const user = {
-        StandardU: 'standard_user',
-        LockedU: 'locked_out_user',
-        ProblemU: 'problem_user',
-        PerformanceGU: 'performance_glitch_user',
-        ErroU: 'error_user',
-        VisualU: 'visual_user'
-    }
 
-    const pass = 'secret_sauce'
 
     beforeEach(() => {
         login.visitPage()
@@ -44,7 +37,7 @@ describe('Cart page testing', ()=>{
 
     })
 
-    it.only('should wait a time with the glitch_user after return from the cart page to the inventory', () => {
+    it('should wait a time with the glitch_user after return from the cart page to the inventory', () => {
 
         login.makeLogin(user.PerformanceGU, pass)
 

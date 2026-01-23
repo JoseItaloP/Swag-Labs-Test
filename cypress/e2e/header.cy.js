@@ -1,18 +1,10 @@
 import login from "../pages/login"
 import header from "../pages/header"
+import { user, pass } from "../helper/users"
 
-describe(' Header elements test ', ()=>{
 
-        const user = {
-            StandardU: 'standard_user',
-            LockedU: 'locked_out_user',
-            ProblemU: 'problem_user',
-            PerformanceGU: 'performance_glitch_user',
-            ErroU: 'error_user',
-            VisualU: 'visual_user'
-        }
+describe(' Header elements test ', () => {
 
-        const pass = 'secret_sauce'
 
         beforeEach(()=>{
             login.visitPage()

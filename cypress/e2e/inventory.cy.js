@@ -3,18 +3,12 @@ import header from "../pages/header"
 import elements from "../pages/header/elements"
 import Inventory from "../pages/Inventory"
 import login from "../pages/login"
+import { user, pass } from "../helper/users"
+
 
 describe('Inventory test page', ()=>{
-        
-        const user = {
-            StandardU: 'standard_user',
-            ProblemU: 'problem_user',
-            PerformanceGU: 'performance_glitch_user',
-            ErroU: 'error_user',
-            VisualU: 'visual_user'
-        }
 
-        const pass = 'secret_sauce'
+
 
     beforeEach(()=>{
         login.visitPage()
