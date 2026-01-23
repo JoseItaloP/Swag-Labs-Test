@@ -4,7 +4,7 @@ export default new class Login {
 
     visitPage() {
 
-        cy.visit(Cypress.env('STANDART_URL'))
+        cy.visit(Cypress.env('URL'))
         cy.screenshot()
 
     }
