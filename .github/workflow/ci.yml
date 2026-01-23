@@ -6,19 +6,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-      # Install dependencies with caching
-      # and run all Cypress tests
       - name: Cypress run
-        uses: cypress-io/github-action@v7
+        uses: cypress-io/github-action@v6
       - uses: actions/upload-artifact@v6
-        # add the line below to store screenshots only on failures
-        # if: failure()
         with:
           name: cypress-reports
           path: cypress/reports
-          if-no-files-found: ignore # 'warn' or 'error' are also available, defaults to `warn`
+          if-no-files-found: ignore
       - uses: actions/upload-artifact@v6
         with:
           name: cypress-videos
           path: cypress/videos
-          if-no-files-found: ignore
+          if-no-files-found: ignore 

@@ -1,5 +1,6 @@
 const { defineConfig } = require("cypress");
 
+
 module.exports = defineConfig({
   reporter: 'cypress-multi-reporters',
   reporterOptions: {
@@ -9,10 +10,10 @@ module.exports = defineConfig({
     },
     cypressMochawesomeReporterReporterOptions: {
       charts: true,
-      reporterPageTitle: 'Relatório de teste',
+      reportPageTitle: 'Relátorio de testes',
       embeddedScreenshots: true,
-      inlineAssets: true,
-      saveAllAttemps: false
+      inLineAssets: true,
+      saveAllAttempts: false
     }
   },
   chromeWebSecurity: false,
