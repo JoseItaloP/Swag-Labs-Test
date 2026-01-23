@@ -9,8 +9,8 @@ describe('Testing the login', ()=>{
     })
 
     it('Sucefully pass test in standard_user', () => { 
-        cy.log(Cypress.env('PASS'))
-        login.makeLogin(Cypress.env('STANDART_USER'), Cypress.env('PASS'))
+
+        login.makeLogin(user.StandardU, pass)
 
         Inventory.confirmatingPage()
 

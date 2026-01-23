@@ -3,13 +3,16 @@ import elements from "./elements"
 export default new class Login {
 
     visitPage() {
-        console.log(`URL - ${Cypress.env('STANDART_URL')}`)
+
         cy.visit(Cypress.env('STANDART_URL'))
         cy.screenshot()
 
     }
 
     makeLogin(UserName, Password){
+        if (!UserName || !Password) {
+            throw new Error(`Valores de login ausentes! User: ${UserName}, Pass: ${Password}`);
+        }
         cy.get(elements.dataTestUsername).type(UserName)
         cy.get(elements.dataTestPass).type(Password)
         cy.get(elements.dataTestButt).click()

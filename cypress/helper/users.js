@@ -7,7 +7,7 @@ const user = {
         VisualU:                Cypress.env('VISUAL_USER')
     }
 
-const pass =                    Cypress.env('PASS')
+const pass = Cypress.env('PASS_USER')
 
 export {
     user,
