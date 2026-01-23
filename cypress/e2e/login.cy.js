@@ -5,7 +5,6 @@ import { user, pass } from "../helper/users"
 describe('Testing the login', ()=>{
 
     beforeEach(() => {
-
         login.visitPage()
     })
 

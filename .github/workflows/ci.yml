@@ -8,6 +8,15 @@ jobs:
         uses: actions/checkout@v6
       - name: Cypress run
         uses: cypress-io/github-action@v6
+        env:
+            CYPRESS_STANDART_USER: ${{ secrets.CYPRESS_STANDART_USER }}
+            CYPRESS_LOCKED_USER: ${{secrets.CYPRESS_LOCKED_USER}}
+            CYPRESS_PROBLEM_USER: ${{secrets.CYPRESS_PROBLEM_USER}}
+            CYPRESS_PERFORMACEG_USER: ${{secrets.CYPRESS_PERFORMACEG_USER}}
+            CYPRESS_ERRO_USER: ${{secrets.CYPRESS_ERRO_USER}}
+            CYPRESS_VISUAL_USER: ${{secrets.CYPRESS_VISUAL_USER}}
+            CYPRESS_PASS_USER: ${{secrets.CYPRESS_PASS_USER}}
+            CYPRESS_STANDART_URL: ${{secrets.CYPRESS_STANDART_URL}}
       - uses: actions/upload-artifact@v6
         with:
           name: cypress-reports
@@ -18,12 +27,3 @@ jobs:
           name: cypress-videos
           path: cypress/videos
           if-no-files-found: ignore 
-        env:
-            CYPRESS_STANDART_USER: ${{ secrets.CYPRESS_STANDART_USER }}
-            CYPRESS_LOCKED_USER: ${{secrets.CYPRESS_LOCKED_USER}}
-            CYPRESS_PROBLEM_USER: ${{secrets.CYPRESS_PROBLEM_USER}}
-            CYPRESS_PERFORMACEG_USER: ${{secrets.CYPRESS_PERFORMACEG_USER}}
-            CYPRESS_ERRO_USER: ${{secrets.CYPRESS_ERRO_USER}}
-            CYPRESS_VISUAL_USER: ${{secrets.CYPRESS_VISUAL_USER}}
-            CYPRESS_PASS_USER: ${{secrets.CYPRESS_PASS_USER}}
-            CYPRESS_STANDART_URL: ${{secrets.CYPRESS_STANDART_URL}}
