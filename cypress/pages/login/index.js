@@ -3,6 +3,7 @@ import elements from "./elements"
 export default new class Login {
 
     visitPage() {
+        console.log(`URL - ${Cypress.env('STANDART_URL')}`)
         cy.visit(Cypress.env('STANDART_URL'))
         cy.screenshot()
 
