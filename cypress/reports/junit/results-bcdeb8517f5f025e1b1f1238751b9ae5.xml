@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="14.554" tests="7" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-01-23T18:48:58" tests="0" file="cypress\e2e\login.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Testing the login" timestamp="2026-01-23T18:48:58" tests="7" time="14.553" failures="0">
+    <testcase name="Testing the login Sucefully pass test in standard_user" time="1.782" classname="Sucefully pass test in standard_user">
+    </testcase>
+    <testcase name="Testing the login Fail to test in standard_user" time="1.464" classname="Fail to test in standard_user">
+    </testcase>
+    <testcase name="Testing the login Sucefully pass test in locked_out_user" time="1.113" classname="Sucefully pass test in locked_out_user">
+    </testcase>
+    <testcase name="Testing the login Sucefully pass test in problem_user" time="1.016" classname="Sucefully pass test in problem_user">
+    </testcase>
+    <testcase name="Testing the login Sucefully pass test in performance_glitch_user" time="6.096" classname="Sucefully pass test in performance_glitch_user">
+    </testcase>
+    <testcase name="Testing the login Sucefully pass test in  error_user" time="0.937" classname="Sucefully pass test in  error_user">
+    </testcase>
+    <testcase name="Testing the login Sucefully pass test in visual_user" time="0.922" classname="Sucefully pass test in visual_user">
+    </testcase>
+  </testsuite>
+</testsuites>

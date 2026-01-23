@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="24.103" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-01-23T18:47:29" tests="0" file="cypress\e2e\cart.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Cart page testing" timestamp="2026-01-23T18:47:29" tests="2" time="24.100" failures="0">
+    <testcase name="Cart page testing should remove the item correctly from the cart" time="9.778" classname="should remove the item correctly from the cart">
+    </testcase>
+    <testcase name="Cart page testing should wait a time with the glitch_user after return from the cart page to the inventory" time="11.433" classname="should wait a time with the glitch_user after return from the cart page to the inventory">
+    </testcase>
+  </testsuite>
+</testsuites>
