@@ -10,9 +10,11 @@ export default new class Login {
     }
 
     makeLogin(UserName, Password){
+
         if (!UserName || !Password) {
             throw new Error(`Valores de login ausentes! User: ${UserName}, Pass: ${Password}`);
         }
+
         cy.get(elements.dataTestUsername).type(UserName)
         cy.get(elements.dataTestPass).type(Password)
         cy.get(elements.dataTestButt).click()
