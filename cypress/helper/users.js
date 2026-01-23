@@ -9,7 +9,7 @@ const user = {
 
 const pass =                    Cypress.env('PASS')
 
-export default {
+export {
     user,
     pass
 }
