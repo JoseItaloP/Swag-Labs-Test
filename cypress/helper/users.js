@@ -8,8 +8,10 @@ const user = {
     }
 
 const pass = Cypress.env('PASS_USER')
+const URL = Cypress.env('URL')
 
 export {
     user,
-    pass
+    pass,
+    URL
 }

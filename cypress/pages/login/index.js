@@ -1,10 +1,11 @@
 import elements from "./elements"
+import { URL } from "../../helper/users"
 
 export default new class Login {
 
     visitPage() {
 
-        cy.visit(Cypress.env('URL'))
+        cy.visit(URL)
         cy.screenshot()
 
     }
