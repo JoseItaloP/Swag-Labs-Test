@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="21.461" tests="4" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-01-25T23:38:40" tests="0" file="cypress\e2e\checkout.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Test the checkout pages" timestamp="2026-01-25T23:38:40" tests="4" time="21.460" failures="0">
+    <testcase name="Test the checkout pages should finishing the buy with the item" time="5.872" classname="should finishing the buy with the item">
+    </testcase>
+    <testcase name="Test the checkout pages should make appear erro after not digitate the data in checkout-page" time="4.660" classname="should make appear erro after not digitate the data in checkout-page">
+    </testcase>
+    <testcase name="Test the checkout pages should return erro in finish with erroUser" time="4.732" classname="should return erro in finish with erroUser">
+    </testcase>
+    <testcase name="Test the checkout pages should not finish the buy without lastName with problem_user" time="4.713" classname="should not finish the buy without lastName with problem_user">
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,9 +1,10 @@
+import { URL } from "../../helper/users"
 const elements = {
-    InventoryUrl: Cypress.env('STANDART_URL') + 'inventory.html',
+    InventoryUrl: URL + 'inventory.html',
     addToCartItem: (element) => `[data-test="add-to-cart-${transformData(element)}"]`,
     removeToCartItem: (element) => `[data-test="remove-${transformData(element)}"]`,
     inventoryItemName: '[data-test="inventory-item-name"]',
-    iventoryIdUrl: (idN) => `https://www.saucedemo.com/inventory-item.html?id=${idN}`,
+    iventoryIdUrl: (idN) => `${URL}inventory-item.html?id=${idN}`,
     itemPositionNum: (idNum) => `[data-test="item-${idNum}-title-link"]`,
     itemPriceValue: (itemId) => `:nth-child(${itemId}) > [data-test="inventory-item-description"] > .pricebar >  [data-test="inventory-item-price"]`,
     itemImage: '[data-test="inventory-item-sauce-labs-backpack-img"]',

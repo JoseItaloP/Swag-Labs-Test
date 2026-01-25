@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="26.887" tests="4" failures="3">
+  <testsuite name="Root Suite" timestamp="2026-01-25T23:28:27" tests="0" file="cypress\e2e\checkout.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Test the checkout pages" timestamp="2026-01-25T23:28:27" tests="4" time="26.880" failures="3">
+    <testcase name="Test the checkout pages should finishing the buy with the item" time="0.000" classname="should finishing the buy with the item">
+      <failure message="Timed out retrying after 4000ms: expected &apos;https://www.saucedemo.com/checkout-step-one.html&apos; to equal &apos;undefinedcheckout-step-one.html&apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected 'https://www.saucedemo.com/checkout-step-one.html' to equal 'undefinedcheckout-step-one.html'
+    at checkoutOne.checkUrlCheckout (webpack://swag-labs-test/./cypress/pages/checkout-one/index.js:5:17)
+    at Context.eval (webpack://swag-labs-test/./cypress/e2e/checkout.cy.js:31:20)
+
+      + expected - actual
+
+      -'https://www.saucedemo.com/checkout-step-one.html'
+      +'undefinedcheckout-step-one.html'
+      ]]></failure>
+    </testcase>
+    <testcase name="Test the checkout pages should make appear erro after not digitate the data in checkout-page" time="5.191" classname="should make appear erro after not digitate the data in checkout-page">
+    </testcase>
+    <testcase name="Test the checkout pages should return erro in finish with erroUser" time="0.000" classname="should return erro in finish with erroUser">
+      <failure message="Timed out retrying after 4000ms: expected &apos;https://www.saucedemo.com/checkout-step-one.html&apos; to equal &apos;undefinedcheckout-step-one.html&apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected 'https://www.saucedemo.com/checkout-step-one.html' to equal 'undefinedcheckout-step-one.html'
+    at checkoutOne.checkUrlCheckout (webpack://swag-labs-test/./cypress/pages/checkout-one/index.js:5:17)
+    at Context.eval (webpack://swag-labs-test/./cypress/e2e/checkout.cy.js:86:20)
+
+      + expected - actual
+
+      -'https://www.saucedemo.com/checkout-step-one.html'
+      +'undefinedcheckout-step-one.html'
+      ]]></failure>
+    </testcase>
+    <testcase name="Test the checkout pages should not finish the buy without lastName with problem_user" time="0.000" classname="should not finish the buy without lastName with problem_user">
+      <failure message="Timed out retrying after 4000ms: expected &apos;https://www.saucedemo.com/checkout-step-one.html&apos; to equal &apos;undefinedcheckout-step-one.html&apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected 'https://www.saucedemo.com/checkout-step-one.html' to equal 'undefinedcheckout-step-one.html'
+    at checkoutOne.checkUrlCheckout (webpack://swag-labs-test/./cypress/pages/checkout-one/index.js:5:17)
+    at Context.eval (webpack://swag-labs-test/./cypress/e2e/checkout.cy.js:121:20)
+
+      + expected - actual
+
+      -'https://www.saucedemo.com/checkout-step-one.html'
+      +'undefinedcheckout-step-one.html'
+      ]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

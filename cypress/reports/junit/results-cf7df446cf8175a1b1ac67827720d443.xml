@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="31.729" tests="12" failures="1">
+  <testsuite name="Root Suite" timestamp="2026-01-25T23:29:01" tests="0" file="cypress\e2e\inventory.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Inventory test page" timestamp="2026-01-25T23:29:01" tests="12" time="31.726" failures="1">
+    <testcase name="Inventory test page should add the item to the cart succefully" time="0.000" classname="should add the item to the cart succefully">
+      <failure message="Timed out retrying after 4000ms: expected &apos;https://www.saucedemo.com/cart.html&apos; to equal &apos;undefinedcart.html&apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected 'https://www.saucedemo.com/cart.html' to equal 'undefinedcart.html'
+    at cart.verifyUrlCart (webpack://swag-labs-test/./cypress/pages/cart/index.js:6:17)
+    at Context.eval (webpack://swag-labs-test/./cypress/e2e/inventory.cy.js:26:13)
+
+      + expected - actual
+
+      -'https://www.saucedemo.com/cart.html'
+      +'undefinedcart.html'
+      ]]></failure>
+    </testcase>
+    <testcase name="Inventory test page should remove the item from the cart succefully" time="2.989" classname="should remove the item from the cart succefully">
+    </testcase>
+    <testcase name="Inventory test page should not remove item from the cart in problem_user" time="3.060" classname="should not remove item from the cart in problem_user">
+    </testcase>
+    <testcase name="Inventory test page should not remove item from the cart in error_user" time="3.594" classname="should not remove item from the cart in error_user">
+    </testcase>
+    <testcase name="Inventory test page should show the same item after click on it" time="1.527" classname="should show the same item after click on it">
+    </testcase>
+    <testcase name="Inventory test page should not show the same item after click on it with problem_user" time="1.468" classname="should not show the same item after click on it with problem_user">
+    </testcase>
+    <testcase name="Inventory test page should change the order from the low to the hight price" time="1.844" classname="should change the order from the low to the hight price">
+    </testcase>
+    <testcase name="Inventory test page should change the order from the hight to low price" time="1.791" classname="should change the order from the hight to low price">
+    </testcase>
+    <testcase name="Inventory test page should change the order to Z-A" time="1.828" classname="should change the order to Z-A">
+    </testcase>
+    <testcase name="Inventory test page should not work click on order items bar in problem_user" time="1.912" classname="should not work click on order items bar in problem_user">
+    </testcase>
+    <testcase name="Inventory test page should return erro after click on order items bar in erro_user" time="2.500" classname="should return erro after click on order items bar in erro_user">
+    </testcase>
+    <testcase name="Inventory test page should show a different item after click on it in visual_user" time="1.082" classname="should show a different item after click on it in visual_user">
+    </testcase>
+  </testsuite>
+</testsuites>

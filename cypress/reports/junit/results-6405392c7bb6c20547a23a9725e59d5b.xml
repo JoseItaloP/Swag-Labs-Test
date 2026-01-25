@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="35.547" tests="7" failures="5">
+  <testsuite name="Root Suite" timestamp="2026-01-25T23:29:35" tests="0" file="cypress\e2e\login.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Testing the login" timestamp="2026-01-25T23:29:35" tests="7" time="35.540" failures="5">
+    <testcase name="Testing the login Sucefully pass test in standard_user" time="0.000" classname="Sucefully pass test in standard_user">
+      <failure message="Timed out retrying after 4000ms: expected &apos;https://www.saucedemo.com/inventory.html&apos; to equal &apos;undefinedinventory.html&apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected 'https://www.saucedemo.com/inventory.html' to equal 'undefinedinventory.html'
+    at Inventory.confirmatingPage (webpack://swag-labs-test/./cypress/pages/Inventory/index.js:6:24)
+    at Context.eval (webpack://swag-labs-test/./cypress/e2e/login.cy.js:15:18)
+
+      + expected - actual
+
+      -'https://www.saucedemo.com/inventory.html'
+      +'undefinedinventory.html'
+      ]]></failure>
+    </testcase>
+    <testcase name="Testing the login Fail to test in standard_user" time="1.229" classname="Fail to test in standard_user">
+    </testcase>
+    <testcase name="Testing the login Sucefully pass test in locked_out_user" time="1.217" classname="Sucefully pass test in locked_out_user">
+    </testcase>
+    <testcase name="Testing the login Sucefully pass test in problem_user" time="0.000" classname="Sucefully pass test in problem_user">
+      <failure message="Timed out retrying after 4000ms: expected &apos;https://www.saucedemo.com/inventory.html&apos; to equal &apos;undefinedinventory.html&apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected 'https://www.saucedemo.com/inventory.html' to equal 'undefinedinventory.html'
+    at Inventory.confirmatingPage (webpack://swag-labs-test/./cypress/pages/Inventory/index.js:6:24)
+    at Context.eval (webpack://swag-labs-test/./cypress/e2e/login.cy.js:34:18)
+
+      + expected - actual
+
+      -'https://www.saucedemo.com/inventory.html'
+      +'undefinedinventory.html'
+      ]]></failure>
+    </testcase>
+    <testcase name="Testing the login Sucefully pass test in performance_glitch_user" time="0.000" classname="Sucefully pass test in performance_glitch_user">
+      <failure message="Timed out retrying after 4000ms: expected &apos;https://www.saucedemo.com/inventory.html&apos; to equal &apos;undefinedinventory.html&apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected 'https://www.saucedemo.com/inventory.html' to equal 'undefinedinventory.html'
+    at Context.eval (webpack://swag-labs-test/./cypress/pages/Inventory/index.js:26:21)
+    at getRet (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:122690:20)
+    at tryCatcher (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1777:23)
+    at Promise.attempt.Promise.try (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:4285:29)
+    at Context.thenFn (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:122701:66)
+    at Context.then (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:122952:21)
+    at wrapped (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:146050:19)
+
+      + expected - actual
+
+      -'https://www.saucedemo.com/inventory.html'
+      +'undefinedinventory.html'
+      ]]></failure>
+    </testcase>
+    <testcase name="Testing the login Sucefully pass test in  error_user" time="0.000" classname="Sucefully pass test in  error_user">
+      <failure message="Timed out retrying after 4000ms: expected &apos;https://www.saucedemo.com/inventory.html&apos; to equal &apos;undefinedinventory.html&apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected 'https://www.saucedemo.com/inventory.html' to equal 'undefinedinventory.html'
+    at Inventory.confirmatingPage (webpack://swag-labs-test/./cypress/pages/Inventory/index.js:6:24)
+    at Context.eval (webpack://swag-labs-test/./cypress/e2e/login.cy.js:50:18)
+
+      + expected - actual
+
+      -'https://www.saucedemo.com/inventory.html'
+      +'undefinedinventory.html'
+      ]]></failure>
+    </testcase>
+    <testcase name="Testing the login Sucefully pass test in visual_user" time="0.000" classname="Sucefully pass test in visual_user">
+      <failure message="Timed out retrying after 4000ms: expected &apos;https://www.saucedemo.com/inventory.html&apos; to equal &apos;undefinedinventory.html&apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected 'https://www.saucedemo.com/inventory.html' to equal 'undefinedinventory.html'
+    at Inventory.confirmatingPage (webpack://swag-labs-test/./cypress/pages/Inventory/index.js:6:24)
+    at Context.eval (webpack://swag-labs-test/./cypress/e2e/login.cy.js:56:18)
+
+      + expected - actual
+
+      -'https://www.saucedemo.com/inventory.html'
+      +'undefinedinventory.html'
+      ]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

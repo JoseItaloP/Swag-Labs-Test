@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="27.058" tests="12" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-01-25T23:39:08" tests="0" file="cypress\e2e\inventory.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Inventory test page" timestamp="2026-01-25T23:39:08" tests="12" time="27.057" failures="0">
+    <testcase name="Inventory test page should add the item to the cart succefully" time="2.645" classname="should add the item to the cart succefully">
+    </testcase>
+    <testcase name="Inventory test page should remove the item from the cart succefully" time="2.582" classname="should remove the item from the cart succefully">
+    </testcase>
+    <testcase name="Inventory test page should not remove item from the cart in problem_user" time="3.002" classname="should not remove item from the cart in problem_user">
+    </testcase>
+    <testcase name="Inventory test page should not remove item from the cart in error_user" time="3.557" classname="should not remove item from the cart in error_user">
+    </testcase>
+    <testcase name="Inventory test page should show the same item after click on it" time="1.486" classname="should show the same item after click on it">
+    </testcase>
+    <testcase name="Inventory test page should not show the same item after click on it with problem_user" time="1.471" classname="should not show the same item after click on it with problem_user">
+    </testcase>
+    <testcase name="Inventory test page should change the order from the low to the hight price" time="1.819" classname="should change the order from the low to the hight price">
+    </testcase>
+    <testcase name="Inventory test page should change the order from the hight to low price" time="1.812" classname="should change the order from the hight to low price">
+    </testcase>
+    <testcase name="Inventory test page should change the order to Z-A" time="1.805" classname="should change the order to Z-A">
+    </testcase>
+    <testcase name="Inventory test page should not work click on order items bar in problem_user" time="1.823" classname="should not work click on order items bar in problem_user">
+    </testcase>
+    <testcase name="Inventory test page should return erro after click on order items bar in erro_user" time="2.558" classname="should return erro after click on order items bar in erro_user">
+    </testcase>
+    <testcase name="Inventory test page should show a different item after click on it in visual_user" time="1.075" classname="should show a different item after click on it in visual_user">
+    </testcase>
+  </testsuite>
+</testsuites>

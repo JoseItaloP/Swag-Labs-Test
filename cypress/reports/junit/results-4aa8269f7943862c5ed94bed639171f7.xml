@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="26.628" tests="2" failures="2">
+  <testsuite name="Root Suite" timestamp="2026-01-25T23:27:59" tests="0" file="cypress\e2e\cart.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Cart page testing" timestamp="2026-01-25T23:27:59" tests="2" time="26.623" failures="2">
+    <testcase name="Cart page testing should remove the item correctly from the cart" time="0.000" classname="should remove the item correctly from the cart">
+      <failure message="Timed out retrying after 4000ms: expected &apos;https://www.saucedemo.com/cart.html&apos; to equal &apos;undefinedcart.html&apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected 'https://www.saucedemo.com/cart.html' to equal 'undefinedcart.html'
+    at cart.verifyUrlCart (webpack://swag-labs-test/./cypress/pages/cart/index.js:6:17)
+    at Context.eval (webpack://swag-labs-test/./cypress/e2e/cart.cy.js:26:13)
+
+      + expected - actual
+
+      -'https://www.saucedemo.com/cart.html'
+      +'undefinedcart.html'
+      ]]></failure>
+    </testcase>
+    <testcase name="Cart page testing should wait a time with the glitch_user after return from the cart page to the inventory" time="0.000" classname="should wait a time with the glitch_user after return from the cart page to the inventory">
+      <failure message="Timed out retrying after 4000ms: expected &apos;https://www.saucedemo.com/inventory.html&apos; to equal &apos;undefinedinventory.html&apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected 'https://www.saucedemo.com/inventory.html' to equal 'undefinedinventory.html'
+    at Context.eval (webpack://swag-labs-test/./cypress/pages/Inventory/index.js:26:21)
+    at getRet (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:122690:20)
+    at tryCatcher (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1777:23)
+    at Promise.attempt.Promise.try (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:4285:29)
+    at Context.thenFn (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:122701:66)
+    at Context.then (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:122952:21)
+    at wrapped (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:146050:19)
+
+      + expected - actual
+
+      -'https://www.saucedemo.com/inventory.html'
+      +'undefinedinventory.html'
+      ]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

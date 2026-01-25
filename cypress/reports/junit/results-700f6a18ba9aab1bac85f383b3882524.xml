@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="3.757" tests="2" failures="0" skipped="1">
+  <testsuite name="Root Suite" timestamp="2026-01-25T23:39:02" tests="0" file="cypress\e2e\header.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name=" Header elements test " timestamp="2026-01-25T23:39:02" tests="2" time="3.755" failures="0">
+    <testcase name=" Header elements test  should make the logout correctly" time="2.711" classname="should make the logout correctly">
+    </testcase>
+  </testsuite>
+</testsuites>

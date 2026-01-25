@@ -1,5 +1,6 @@
+import { URL } from "../../helper/users"
 const elements ={
-    checkoutOneUrl: Cypress.env('STANDART_URL') + 'checkout-step-one.html',
+    checkoutOneUrl: URL + 'checkout-step-one.html',
     inputFirstName: '[data-test="firstName"]',
     inputLastName: '[data-test="lastName"]',
     inputPostalCode: '[data-test="postalCode"]',
