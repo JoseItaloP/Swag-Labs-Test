@@ -1,13 +1,14 @@
-name: End-to-end tests
+name: Chrome
 on: push
 jobs:
-  cypress-run:
+  chrome:
     runs-on: ubuntu-24.04
+    name: E2E on Chrome
     steps:
-      - name: Checkout
-        uses: actions/checkout@v6
-      - name: Cypress run
-        uses: cypress-io/github-action@v6
+      - uses: actions/checkout@v6
+      - uses: cypress-io/github-action@v7
+        with:
+          browser: chrome
         env: 
             CYPRESS_STANDART_USER: ${{secrets.CYPRESS_STANDART_USER}}
             CYPRESS_LOCKED_USER: ${{secrets.CYPRESS_LOCKED_USER}}
