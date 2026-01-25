@@ -19,7 +19,6 @@ jobs:
             CYPRESS_VISUAL_USER: ${{secrets.CYPRESS_VISUAL_USER}}
             CYPRESS_PASS: ${{secrets.CYPRESS_PASS}}
             CYPRESS_URL: ${{secrets.CYPRESS_URL}}
-
       - uses: actions/upload-artifact@v6
         with:
           name: cypress-reports
